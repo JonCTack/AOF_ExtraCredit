@@ -236,10 +236,12 @@ const removePhone = (arrayPhone) => {
     });
 }
 removePhone(users)
+
 const getUserInfo = (arrayUsers, email) => {
     let user = arrayUsers.find(el => el.email == email)
     return user
 }
+
 const changeUsername = (email, newUsername) => {
     users.forEach(el => {
         if(el.email == email){
@@ -248,26 +250,32 @@ const changeUsername = (email, newUsername) => {
     });
 }
 changeUsername("Telly.Hoeger@billy.biz", "Eren Yeager")
+
 let subPoints = [50, 20, 40, 33, 60, 20, 90, 110, 15, 30];
+
 const setSubPoints = (userArray, pointsArray) => {
     pointsArray.forEach((elPoint, ind) => {
                 userArray[ind].monthlyPoints = elPoint   
     });
 }
 setSubPoints(users, subPoints)
+
 var months = 3
+
 const addSubPoints = (userArray, months) => {
     userArray.forEach(el => {
     el.monthlyPoints = el.monthlyPoints + (10*months)        
     });
 }
 addSubPoints(users, months)
+
 const makeSpecialMonth = (userArray) => {
     userArray.forEach(el => {
         el.monthlyPoints = Math.floor(el.monthlyPoints * (1.1))
     });
 }
 makeSpecialMonth(users)
+
 const delUser = (userArray, email) => {
     userArray.forEach((el,inx) => {
         if (el.email == email){
